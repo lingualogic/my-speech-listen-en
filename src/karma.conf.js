@@ -25,7 +25,40 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+
+    // for all platforms
+    // browsers: ['Chrome', 'Firefox', 'Opera'],
+
+    // only for mac
+    // browsers: ['Chrome', 'Firefox', 'Opera', 'Safari'],
+
+    browsers: ['ChromeHeadlessCI'],
+
+    // browsers: ['ChromeHeadless'],
+    // browsers: ['Chrome'],
+    // browsers: ['Firefox'],
+    // browsers: ['Opera'],
+    // browsers: ['OperaWindows'],
+    // browsers: ['Safari'],
+    // browsers: ['Edge'],
+
+    customLaunchers: {
+        ChromeHeadlessCI: {
+            base: 'ChromeHeadless',
+            flags: ['--no-sandbox']
+        },
+        OperaWindows: {
+            base: 'Opera',
+            flags: ['--ran-launcher']
+        }
+    },
+
+    // Concurrency level
+    // how many browser should be started simultaneous
+    concurrency: 1,
+
+    browserNoActivityTimeout: 100000,
+
     singleRun: true
   });
 };
