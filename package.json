@@ -21,8 +21,8 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
-    "speech-angular": "file:speech-angular-0.5.8.tgz",
-    "speech-framework": "file:speech-framework-0.5.8.tgz",
+    "speech-angular": "file:speech-angular-0.5.17.tgz",
+    "speech-framework": "^0.5.17",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

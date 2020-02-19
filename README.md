@@ -36,8 +36,8 @@ You find the current release of the ready-to-use packages on the website of [Lin
 
 Download the packages and copy them into the workspace. Then they can be installed:
 	
-	$ npm install speech-framework-0.5.8.tgz
-	$ npm install speech-angular-0.5.8.tgz
+	$ npm install speech-framework
+	$ npm install speech-angular-0.5.17.tgz
 
 Let's continue in the code. For programming we can recommend [VScode](https://code.visualstudio.com/).
 
