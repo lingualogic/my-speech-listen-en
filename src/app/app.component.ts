@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
                  private ref: ChangeDetectorRef ) { }
 
     ngOnInit(): void {
+        this.listenService.asr = 'ASRGoogle';
         this.listenResultEvent = this.listenService.resultEvent.subscribe(aText => {
             this.listenResult = aText;
             this.ref.detectChanges();

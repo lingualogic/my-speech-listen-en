@@ -203,7 +203,56 @@ Does the app understands you? Send your feedback to *info@lingualogic.de*.
 
 ## Extension
 
-Speech recognition using HTML5 and the Web-Audio-API is only supported in Chrome, to enable speech recognition on all browsers and plattforms, you may use a Cloud service, like [Nuance Mix](https://lingualogic.de/speech-angular/docs/latest/api/modules/speech_nuance.html). 
+Speech recognition using HTML5 and the Web-Audio-API is only supported in Chrome, to enable speech recognition on all browsers and plattforms, you may use a cloud service, like 
+[Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text). 
 
 If you want to analyse the users intention, you need natural language understanding, which is provided in the [IntentService](https://lingualogic.de/speech-angular/docs/latest/api/classes/speech_intent.intentservice.html).
+
+### Enable speech recognition for all Browsers
+
+In order to enable speech recognition for all browsers, we add the Google Cloud Speech-to-Text API to our project. Therefore we follow the steps: 
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/), setup a project and activate the Google Cloud Speech-to-Text API.
+
+2. Set up a server (like the [speech-tokenserver](https://github.com/lingualogic/speech-tokenserver)) or a FaaS to create client access token. Parse the GOOGLE_SERVER_URL in in the `credentials/google-credentials.ts`.  
+
+3. In `environment.ts` and `environment.prod.ts` add a `google` parameter: 
+
+		export const environment = {
+  			production: false,
+  			google: false,
+		};
+
+4. In `main.ts` import google module, set the google-credentials and init the cloud-service:
+
+		import { GoogleModule } from 'speech-angular';
+
+		...
+
+		import { GOOGLE_APP_KEY, GOOGLE_SERVER_URL } from './../credentials/google-credentials-my';
+		const googleOption = {
+			googleDynamicCredentialsFlag: false,
+			googleAppKey: GOOGLE_APP_KEY,
+			googleServerUrl: GOOGLE_SERVER_URL,
+			errorOutputFlag: true
+		};
+
+		...
+
+		GoogleModule.init( googleOption, (aGoogleFlag: boolean) => {
+		if ( googleOption && googleOption.errorOutputFlag ) {
+			console.log( '===> Google:', aGoogleFlag);
+		}
+		environment.google = aGoogleFlag;
+		});
+
+5. In the `app.component.ts` we can now shwich the ASR used by the ListenService.  
+
+		ngOnInit(): void {
+        	this.listenService.asr = 'ASRGoogle';
+			... }
+
+Test your app on another Browser, it should work! 
+
+
 
