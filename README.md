@@ -208,7 +208,7 @@ Speech recognition using HTML5 and the Web-Audio-API is only supported in Chrome
 
 If you want to analyse the users intention, you need natural language understanding, which is provided in the [IntentService](https://lingualogic.de/speech-angular/docs/latest/api/classes/speech_intent.intentservice.html).
 
-### Enable speech recognition for all Browsers
+### Enable speech recognition for all browsers
 
 In order to enable speech recognition for all browsers, we add the Google Cloud Speech-to-Text API to our project. Therefore we follow the steps: 
 
