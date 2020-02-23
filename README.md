@@ -6,7 +6,6 @@ In this Getting Started we want to create an Angluar app and extend it with the 
 To follow this tutorial you will need the [Angular CLI](https://github.com/angular/angular-cli/wiki). Please install it if you don't have it yet. Afterwards the project dependencies can be installed.
 
 	$ npm install -g @angular/cli
-	$ npm install
 	
 **Hint:** Angular requires Node.js version 8.x or 10.x. To check your version, run `node -v` in a terminal. To get *Node.js*, go to [nodejs.org](https://nodejs.org/en/). 
 
@@ -214,7 +213,7 @@ In order to enable speech recognition for all browsers, we add the Google Cloud 
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/), setup a project and activate the Google Cloud Speech-to-Text API.
 
-2. Set up a server (like the [speech-tokenserver](https://github.com/lingualogic/speech-tokenserver)) or a FaaS to create client access token. Parse the GOOGLE_SERVER_URL in in the `credentials/google-credentials.ts`.  
+2. Set up a server (like the [speech-tokenserver](https://github.com/lingualogic/speech-tokenserver)) or a FaaS to create client access token. This Example uses the gcf in `functions/tokenserver`. Follow the [instruction](./../functions/tokenserver) and enter the GOOGLE_SERVER_URL in the `credentials/google-credentials.ts`.  
 
 3. In `environment.ts` and `environment.prod.ts` add a `google` parameter: 
 
@@ -252,7 +251,7 @@ In order to enable speech recognition for all browsers, we add the Google Cloud 
         	this.listenService.asr = 'ASRGoogle';
 			... }
 
-Test your app on another Browser, it should work! 
+Test your app on another browser (than Chrome), it should work! 
 
 
 

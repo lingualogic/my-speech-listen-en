@@ -1,0 +1,14 @@
+{
+  "name": "tokenserver",
+  "version": "1.0.0",
+  "description": "Google Function for Tokenserver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonard Fuechsel",
+  "license": "ISC",
+  "dependencies": {
+    "google-oauth-jwt": "^0.2.0"
+  }
+}
