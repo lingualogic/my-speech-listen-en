@@ -133,7 +133,7 @@ In the callback the result of the speech recognition gets log in the console.
 	    }
 	}
 
-###Show the result of the speech recognition
+### Show the result of the speech recognition
 
 To show the result of the speech recognition in the view, we instantiate a string `listenResult`.
 In the callbak function of the `listenResultEvent` we set its value and update the view. 
@@ -170,7 +170,7 @@ In the callbak function of the `listenResultEvent` we set its value and update t
 	    }
 	}
 
-###Edit the view
+### Edit the view
 
 Subsequently we edit the template file `app.component.html`. We add an input - to show the `listenResult` and a button - to call the `start()` fucntion.
 
