@@ -3,6 +3,7 @@
 In this Getting Started we want to create an Angluar app and extend it with the **ListenService**. The service enables [(Automatic) Speech Recognition](https://en.wikipedia.org/wiki/Speech_recognition) - ASR within the app.
 
 ## Installation
+
 To follow this tutorial you will need the [Angular CLI](https://github.com/angular/angular-cli/wiki). Please install it if you don't have it yet. Afterwards the project dependencies can be installed.
 
 	$ npm install -g @angular/cli
@@ -10,6 +11,7 @@ To follow this tutorial you will need the [Angular CLI](https://github.com/angul
 **Hint:** Angular requires Node.js version 8.x or 10.x. To check your version, run `node -v` in a terminal. To get *Node.js*, go to [nodejs.org](https://nodejs.org/en/). 
 
 ## Start 
+
 To start the example use this command:
 
 	$ ng serve
@@ -17,6 +19,7 @@ To start the example use this command:
 Open [localhost on port 4200](localhost:4200) in **Chrome** to test the speech recognition.
 
 ## Build 
+
 To build a version for production, use:
 
 	$ ng build
@@ -251,7 +254,4 @@ In order to enable speech recognition for all browsers, we add the Google Cloud 
         	this.listenService.asr = 'ASRGoogle';
 			... }
 
-Test your app on another browser (than Chrome), it should work! 
-
-
-
+Test your app on another browser (than Chrome), it should work!

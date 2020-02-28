@@ -1,4 +1,5 @@
 # Tokenserver as FaaS
+
 In order to use the the Google Cloud Speech-to-Text a client access token is needed. For the generation of the token a server, like the [speech-tokenserver](https://github.com/lingualogic/speech-tokenserver) or Function as a Service (FaaS) can be used. 
 This example implements a Google Cloud Function (GCF) tokenserver.
 
