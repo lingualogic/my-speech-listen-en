@@ -8,7 +8,7 @@ To follow this tutorial you will need the [Angular CLI](https://github.com/angul
 
 	$ npm install -g @angular/cli
 	
-**Hint:** Angular requires Node.js version 8.x or 10.x. To check your version, run `node -v` in a terminal. To get *Node.js*, go to [nodejs.org](https://nodejs.org/en/). 
+**Hint:** Angular requires Node.js version > 10.x. To check your version, run `node -v` in a terminal. To get *Node.js*, go to [nodejs.org](https://nodejs.org/en/). 
 
 ## Start 
 
@@ -28,18 +28,14 @@ The build can be found in the [dist](/dist) directory.
 	
 ## Step-by-Step Instruction
 
-Create a new Angular app project and change directory to the workspace. 
+Create a new Angular app project and change directory to the workspace.
 
     $ ng new my-speech-listen
     $ cd my-speech-listen
 
-To be able to use the ListenService, we install the speech-framework and speech-angular.
-You find the current release of the ready-to-use packages on the website of [LinguaLogic](lingualogic.de) in the Download section. 
-
-Download the packages and copy them into the workspace. Then they can be installed:
+To be able to use the ListenService, we install the speech-angular:
 	
-	$ npm install speech-framework
-	$ npm install speech-angular-0.5.17.tgz
+	$ npm install speech-angular
 
 Let's continue in the code. For programming we can recommend [VScode](https://code.visualstudio.com/).
 
